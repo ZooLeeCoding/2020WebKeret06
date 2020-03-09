@@ -1,0 +1,21 @@
+<div>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <label>Title:</label>
+        <input type="text" formControlName="title">
+
+        <label>Author:</label>
+        <input type="text" formControlName="author">
+
+        <label>Published:</label>
+        <input type="date" formControlName="published">
+
+        <label>Price:</label>
+        <input type="number" formControlName="price">
+
+        <button type="submit" [disabled]="!bookForm.valid">Beküldés</button>
+
+        <div>
+            {{bookForm.value.toString()}}
+        </div>
+    </form>
+</div>
