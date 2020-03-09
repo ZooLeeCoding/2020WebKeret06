@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-string-ops',
@@ -11,9 +12,13 @@ export class StringOpsComponent implements OnInit {
   str2: string;
   result: string
 
-  constructor() { }
+  constructor(private routerService: Router) { }
 
   ngOnInit() {
+  }
+
+  navigateToFirstChild() {
+    this.routerService.navigate(['/first-child']);
   }
 
   concat() {
