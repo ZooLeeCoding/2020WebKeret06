@@ -12,6 +12,8 @@ import { TemplateFormComponent } from './template-form/template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 import { MaterialModule } from './material.module';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { MaterialModule } from './material.module';
     StringOpsComponent,
     FirstChildComponent,
     TemplateFormComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MaterialModule } from './material.module';
     ReactiveFormsModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
